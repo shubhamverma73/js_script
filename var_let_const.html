@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        var a = 10;
+        var a = 5;
+        // var a // redeclare
+        // a = 5 // redefine
+        console.log(a)
+
+        let b = 20;
+        b = 30;
+        console.log(b)
+
+        const c = 50;
+        console.log(c)
+
+        var x = 10;
+        function myFunction() {
+            console.log(x); // undefined
+            var x = 5;
+        }
+        myFunction()
+
+        let m = 20;
+        function myFunctionLet() {
+            console.log(m); // ReferenceError
+            let m = 5;
+        }
+        myFunctionLet()
+
+        function myFunctionLet() {
+            console.log(n); // ReferenceError
+            const n = 5;
+        }
+        myFunctionLet()
+    </script>
+</body>
+
+</html>
