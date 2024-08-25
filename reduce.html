@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let arr = [1, 2, 3, 4]; // 10
+
+        let sum = 0
+        for(let x = 0; x<arr.length; x++) {
+            sum += arr[x];
+        }
+        console.log('sum', sum)
+
+        // reduce
+        let reduceSum = arr.reduce((previousVal, currentVal) =>         previousVal + currentVal , 0)
+        console.log('reduceSum', reduceSum)
+    </script>
+</body>
+
+</html>
