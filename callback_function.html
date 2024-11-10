@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function fetchData(callback) {
+            let data = {messsge: "I am calling from callback"};
+            callback(null, data)
+        }
+        fetchData(function (error, data) {
+            if(error) {
+                console.log("Error: ", error)
+            } else {
+                console.log("Success: ", data)
+            }
+        })
+    </script>
+</body>
+
+</html>
