@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let fullName = {firstName:'Deepak', lastName:'Shrivasta'}
+        function myFunction(params1, params2) {
+            firstName = 'Sonu';
+            lastName = 'Verma';
+            console.log(`${this.firstName} ${this.lastName} ${params1} ${params2}`);
+        }
+        myFunction('Hello', 'How are your from regular');
+        myFunction.call(fullName, 'Hello', 'How are your from call')
+        myFunction.apply(fullName, ['Hello', 'How are your from apply'])
+        let returnBind = myFunction.bind(fullName);
+        returnBind('Hello', 'How are your from bind')
+    </script>
+</body>
+
+</html>
