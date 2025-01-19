@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<script>
+		let array = [5, 10, 15, 9, 20, 25, 3];
+
+		let newArr = []
+		for(let x = 0; x<=array.length; x++) {
+			if(array[x] >= 10) {
+				newArr.push(array[x])
+			}
+		}
+		console.log('newArr', newArr)
+
+		let newFilter = array.filter(y => y >= 10)
+		console.log('newFilter', newFilter)
+
+		const fruits = ['apple', 'banana', 'grapes', 'mango', 'orange'];
+		let filterFruits = fruits.filter(value => value.includes('an') )
+		console.log('filterFruits', filterFruits)
+	</script>
+</body>
+
+</html>
