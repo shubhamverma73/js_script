@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function HigherOrder(paramsFunction) {
+            paramsFunction()
+        }
+
+        function regularFunction() {
+            console.log('Hello from Higher order function.')
+        }
+
+        HigherOrder(regularFunction)
+    </script>
+</body>
+
+</html>
