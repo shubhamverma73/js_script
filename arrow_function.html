@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        // ======== Syntax
+        // function expression
+        let x = function (x, y) {
+            return x * y;
+        }
+        console.log('x', x(4, 5))
+
+        // using arrow functions
+        let y = (x, y) => x * y;
+        console.log('y', y(1, 2))
+
+        // ======== Arrow functions don't have their own bindings to "this"
+        let me = {
+            name: "Sachid",
+            thisInRegular() {
+                console.log("My name is " + this.name);
+            },
+            thisInArrow: () => {
+                console.log("My name is " + this.name);
+            }
+        };
+        me.thisInRegular();
+        me.thisInArrow();
+
+        // ======= Arrow functions cannot be used as constructors
+        let sumR = function (x, y) {
+            console.log('sumR', x + y);
+        }
+        new sumR(2, 3);
+
+        let sumF = (x, y) => console.log('sumF', x + y);
+        new sumF(2, 3);
+
+        // ===== No duplicate named parameters
+        function add(x, x){}
+
+        let add = (y, y) => {}
+
+        // ===== Arrow functions aren't suitable for call, apply and bind methods
+
+    </script>
+</body>
+
+</html>
