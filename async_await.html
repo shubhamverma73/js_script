@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function myPromise() {
+            return new Promise(function(resolve, reject) {
+                setTimeout(function() {
+                    let data = "Hi from Promise";
+                    resolve(data)
+                }, 1000)
+            })
+        }
+
+        async function myData() {
+            try {
+                let result = await myPromise()
+                console.log(result)
+            } catch(err) {
+                console.log(err)
+            }
+        }
+        myData()
+    </script>
+</body>
+
+</html>
