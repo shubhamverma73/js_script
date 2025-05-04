@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        // synchronous
+        console.log('start');
+        function sync() {
+            console.log('synchronous function')
+        }
+        sync()
+        console.log('end');
+
+        // asynchronous
+        console.log('start');
+        function async() {
+            setTimeout(() => {
+                console.log('asynchronous function 1');
+            }, 2000)
+        }
+        async()
+        function async2() {
+            setTimeout(() => {
+                console.log('asynchronous function 2');
+            }, 1000)
+        }
+        async2()
+        console.log('end');
+
+
+
+    </script>
+</body>
+
+</html>
