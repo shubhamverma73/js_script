@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        let promiseVal = new Promise((resolve, reject) => {
+            if(false) {
+                resolve('success')
+            } else {
+                reject('failed')
+            }
+        });
+
+        promiseVal.then((val) => {
+            console.log('then', val)
+        }).catch((error) => {
+            console.log('catch', error)
+        })
+    </script>
+</body>
+
+</html>
