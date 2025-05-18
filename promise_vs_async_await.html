@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function getDataWithPromise() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    const data = "promise data result";
+                    resolve(data)
+                }, 1000)
+            })
+        }
+
+        // Promise
+        getDataWithPromise().
+        then((val) => {
+            console.log('then', val)
+        }).
+        catch((error) => {
+            console.log('catch', error)
+        })
+
+        // async await
+        async function getData() {
+            try {
+                const result = await getDataWithPromise()
+                console.log('try', result)
+            } catch (error) {
+                console.log('catch', error)
+            }
+        }
+        getData()
+    </script>
+</body>
+
+</html>
