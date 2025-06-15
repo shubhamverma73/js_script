@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function Student() {
+            this.name = "Rinky",
+            this.age = 28;
+        }
+        let std1 = new Student();
+        let std2 = new Student();
+
+        //std1.city = 'delhi';
+        //std2.city = 'delhi';
+        Student.prototype.city = 'delhi';
+        console.log(std1)
+        console.log(std2.age)
+        console.log(std1.city)
+        console.log(std2.city)
+    </script>
+</body>
+
+</html>
